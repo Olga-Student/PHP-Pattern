@@ -14,7 +14,7 @@ class User extends Model
         return 'users';
     }
 }
-class User extends Model
+class Super
 {
     public $full_name;
     public $email;
