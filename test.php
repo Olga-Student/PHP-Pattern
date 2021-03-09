@@ -14,3 +14,19 @@ class User extends Model
         return 'users';
     }
 }
+class User extends Model
+{
+    public $full_name;
+    public $email;
+
+    public function getByLogin($login)
+    {
+        $sql = "SELECT * FROM {$this->tablename} WHERE login = {$login}";
+        return $this->db->queryOne($sql);
+    }
+    public function getTableName()
+    {
+        return 'users';
+    }
+}
+
