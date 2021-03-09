@@ -59,3 +59,14 @@ $a1->foo();//1  при вызове функции присваивается с
 $b1->foo();//1 при наследовании класса был создан новый метод, который начал выполнение с начала
 $a1->foo();//2 при следующем вызове произойдет увеличение на один 1+1
 $b1->foo();//2
+
+class Category extends Model
+{
+    public $id;
+    public $name;
+
+    public function getTableName()
+    {
+        return 'categories';
+    }
+}
